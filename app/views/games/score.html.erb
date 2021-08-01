@@ -1,0 +1,11 @@
+<h1>Result</h1>
+<p>You chose the word <strong><%= @attempt %></strong>.</p>
+<% if !@array.all? %>
+  <p>This word can't be written with the letters <strong><%= @letters %></strong>.</p>
+<% else %>
+  <% if @isword %>
+    <p>Great! You got it!</p>
+  <% else %>
+    <p>This isn't an English word.</p>
+  <% end %>
+<% end %>
