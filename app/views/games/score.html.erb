@@ -1,11 +1,12 @@
 <h1>Result</h1>
 <p>You chose the word <strong><%= @attempt %></strong>.</p>
-<% if !@array.all? %>
-  <p>This word can't be written with the letters <strong><%= @letters %></strong>.</p>
+<p><% if !@array.all? %>
+  This word can't be written with the letters <strong><%= @letters %></strong>.
 <% else %>
   <% if @isword %>
-    <p>Great! You got it!</p>
+    <strong>Great! You got it!</strong>
   <% else %>
-    <p>This isn't an English word.</p>
+    This isn't an English word.
   <% end %>
-<% end %>
+<% end %></p>
+<%= link_to 'Try again', '/new' %>
